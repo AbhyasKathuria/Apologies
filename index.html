@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Bossmam ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --pink: #ff9a9e;
+    --peach: #fad0c4;
+    --purple: #cdb4db;
+    --text: #4a4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--pink), var(--peach), var(--purple));
+    overflow-x: hidden;
+    color: var(--text);
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-120vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+.card {
+    background: rgba(255,255,255,0.75);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.poem {
+    white-space: pre-line;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.08) rotate(-1deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    font-size: 0.95rem;
+    opacity: 0.85;
+}
+
+/* Goofy shake */
+.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+    100% { transform: rotate(0deg); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Hey Bossmam 💗</h1>
+    <p class="subtitle">This tiny corner of the internet exists… just for you.</p>
+
+    <div class="card">
+        <div class="poem">
+Imagine the woods, without a tree.
+Imagine the rivers, without the sea.
+Imagine yourself, without me.
+Imagine how lost, I would be.
+
+You are my raft in the rapids of life.
+You are my peace in the midst of strife.
+You are the shore to a shipwrecked soul.
+You’re the bridge to a lifelong goal.
+
+You are the finish of an Olympic run.
+You are the shine when there is no sun.
+You are a rope when I start to fall.
+You are my love, and you are my all.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2 style="font-family: 'Dancing Script', cursive;">A Soft Sorry 🤍</h2>
+        <div class="poem">
+In my heart, I hold deep remorse,
+For the lie that caused you pain, of course.
+I ask for your forgiveness, my bossmam,
+As I vow to be honest, hand in glove.
+
+I know I let you down, it's true,
+But my love for you is steadfast and true.
+I promise to learn from my mistake,
+And never again your trust to break.
+
+Please find it in your heart to forgive,
+And let our love and trust continue to live.
+I'm sorry for the pain I caused, my dear,
+With your forgiveness, let's move forward, clear.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>One Last Thing 😶‍🌫️</h2>
+        <p>
+            I’m not perfect. I mess up.  
+            But choosing you? That part was never a mistake.
+        </p>
+
+        <button onclick="showMessage()">Click if you're still a little angry 🙈</button>
+
+        <p id="secret" class="hidden" style="margin-top:20px;">
+            Even when you're angry, you're still my favorite human.  
+            — Abhyas Kathuria ❤️
+        </p>
+    </div>
+
+    <footer>
+        Made with too much love and slightly nervous fingers by Abhyas Kathuria
+    </footer>
+
+</div>
+
+<script>
+/* Floating hearts */
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.className = 'heart';
+    heart.innerText = Math.random() > 0.5 ? '❤️' : '✨';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+setInterval(createHeart, 400);
+
+/* Button interaction */
+function showMessage() {
+    const msg = document.getElementById('secret');
+    msg.classList.remove('hidden');
+    msg.classList.add('shake');
+}
+</script>
+
+</body>
+</html>
